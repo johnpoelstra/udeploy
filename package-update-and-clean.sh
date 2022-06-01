@@ -1,9 +1,8 @@
 # install system without taking in updates along the way and then run this script
+cp ./BestHQ-stem-background.jpg ~
 sudo apt update
 sudo apt install git vim gdebi gnome-keyring htop -y
-cd /tmp
-wget https://launcher.mojang.com/download/Minecraft.deb -O mc.deb
-sudo gdebi -n /tmp/mc.deb
+sh ./install-minecraft.sh
 sudo apt purge libreoffice-core libreoffice-common libreoffice-style-breeze thunderbird vlc gimp
 sudo apt dist-upgrade -y
 sudo apt autoremove -y
